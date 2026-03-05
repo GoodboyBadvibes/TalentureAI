@@ -27,15 +27,26 @@ export default function Page() {
 
   useEffect(() => {
     const checkAuth = async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser()
-      if (user) {
-        router.push('/dashboard')
+      try {
+        const { data: { user } } = await supabase.auth.getUser()
+        if (user) {
+          router.push('/dashboard')
+        }
+      } catch (error) {
+        console.error('Auth check failed:', error)
+      } finally {
+        setIsCheckingAuth(false)
       }
-      setIsCheckingAuth(false)
     }
+
+    // Add timeout to prevent infinite loading
+    const timeoutId = setTimeout(() => {
+      setIsCheckingAuth(false)
+    }, 3000)
+
     checkAuth()
+
+    return () => clearTimeout(timeoutId)
   }, [])
 
   const handleSignUp = async (e: React.FormEvent) => {

@@ -4,8 +4,21 @@ import { DashboardHeader } from '@/components/dashboard-header'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
+import { useState } from 'react'
+import { Loader2 } from 'lucide-react'
 
 export default function DashboardPage() {
+  const [loadingTool, setLoadingTool] = useState<string | null>(null)
+
+  const handleExternalLink = async (url: string, toolName: string) => {
+    setLoadingTool(toolName)
+    // Small delay to show loading state
+    setTimeout(() => {
+      window.open(url, '_blank', 'noopener,noreferrer')
+      setLoadingTool(null)
+    }, 500)
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <DashboardHeader />
@@ -39,9 +52,20 @@ export default function DashboardPage() {
                 <p className="text-sm text-muted-foreground mb-6">
                   Analyze and generate comprehensive CV assessment reports with detailed feedback on structure, content, and improvement suggestions.
                 </p>
-                <a href="https://cv-assessment-app.replit.app/" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full">Open Tool</Button>
-                </a>
+                <Button
+                  className="w-full"
+                  onClick={() => handleExternalLink('https://cv-assessment-app.replit.app/', 'cv-writer')}
+                  disabled={loadingTool === 'cv-writer'}
+                >
+                  {loadingTool === 'cv-writer' ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Opening...
+                    </>
+                  ) : (
+                    'Open Tool'
+                  )}
+                </Button>
               </CardContent>
             </Card>
 
@@ -63,7 +87,20 @@ export default function DashboardPage() {
                   Have natural conversations with advanced AI powered by ElevenLabs' conversational AI technology with realistic voice interactions.
                 </p>
                 <Link href="/tools/voice-ai">
-                  <Button className="w-full">Open Tool</Button>
+                  <Button
+                    className="w-full"
+                    onClick={() => setLoadingTool('voice-ai')}
+                    disabled={loadingTool === 'voice-ai'}
+                  >
+                    {loadingTool === 'voice-ai' ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Opening...
+                      </>
+                    ) : (
+                      'Open Tool'
+                    )}
+                  </Button>
                 </Link>
               </CardContent>
             </Card>
