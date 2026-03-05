@@ -101,9 +101,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   const signOut = async () => {
-    await supabase.auth.signOut()
-    setUser(null)
-    setProfile(null)
+    try {
+      await supabase.auth.signOut()
+    } catch (err) {
+      console.error('[Auth] signOut error:', err)
+    } finally {
+      setUser(null)
+      setProfile(null)
+    }
   }
 
   return (
