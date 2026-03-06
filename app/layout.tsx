@@ -10,7 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const revalidate = 0
 
 export const metadata: Metadata = {
-  title: 'AI Tools Hub',
+  title: 'Talenture AI Hub',
   description: 'Manage your AI writing and voice tools',
   generator: 'v0.app',
   icons: {

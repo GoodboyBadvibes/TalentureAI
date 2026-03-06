@@ -27,7 +27,7 @@ export default function DashboardPage() {
         <div className="container mx-auto px-4 py-12 md:py-16">
           {/* Welcome Section */}
           <div className="mb-12">
-            <h1 className="text-4xl font-bold tracking-tight mb-2">Welcome to AI Tools Hub</h1>
+            <h1 className="text-4xl font-bold tracking-tight mb-2">Welcome to Talenture AI Hub</h1>
             <p className="text-lg text-muted-foreground">
               Access powerful AI tools to enhance your productivity
             </p>
@@ -76,7 +76,7 @@ export default function DashboardPage() {
                   <span className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600">
                     🎤
                   </span>
-                  Eleven AI Lab
+                  Role Play Agent
                 </CardTitle>
                 <CardDescription>
                   Interactive AI voice conversations
@@ -119,11 +119,11 @@ export default function DashboardPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">2</span>
-                  <span>Each tool offers unique features to enhance your content</span>
+                  <span>Each tool offers unique features</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">3</span>
-                  <span>Save and export your work for use anywhere</span>
+                  <span>Save and export your work </span>
                 </li>
               </ul>
             </CardContent>
@@ -135,7 +135,7 @@ export default function DashboardPage() {
       <footer className="border-t border-border bg-muted/30">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>&copy; 2024 AI Tools Hub. All rights reserved.</p>
+            <p>&copy; 2024 Talenture AI Hub. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <Link href="#" className="hover:text-foreground">Privacy</Link>
               <Link href="#" className="hover:text-foreground">Terms</Link>
