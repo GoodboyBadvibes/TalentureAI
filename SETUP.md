@@ -1,7 +1,7 @@
-# Talenture AI Hub - Setup Guide
+# Oscar Temple AI Hub - Setup Guide
 
 ## Overview
-Talenture AI Hub is a full-stack application for managing AI writing and voice tools with role-based access control and admin capabilities.
+Oscar Temple AI Hub is a full-stack application for managing AI writing and voice tools with role-based access control and admin capabilities.
 
 ## Tech Stack
 - **Frontend**: Next.js 15 with React 19
@@ -47,7 +47,7 @@ Row-Level Security is enabled with the following policies:
 - Automatic logout functionality
 
 ### Dashboard
-- User-friendly interface for accessing Talenture AI
+- User-friendly interface for accessing Oscar Temple AI
 - Writing Assistant tool (placeholder)
 - Voice AI tool with ElevenLabs integration (placeholder)
 - Responsive design for mobile and desktop

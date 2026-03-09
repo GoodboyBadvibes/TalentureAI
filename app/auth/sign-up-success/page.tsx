@@ -26,7 +26,7 @@ export default function Page() {
               <div className="flex flex-col gap-6">
                 <p className="text-sm text-muted-foreground">
                   Click the link in the email to confirm your account and start
-                  using the Talenture AI Hub. If you don't see the email, check your
+                  using the Oscar Temple AI Hub. If you don't see the email, check your
                   spam folder.
                 </p>
                 <Link href="/auth/login">

@@ -10,9 +10,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const revalidate = 0
 
 export const metadata: Metadata = {
-  title: 'Talenture AI Hub',
-  description: 'All Talenture AI tools in one palce',
-  generator: 'Talenture',
+  title: 'Oscar Temple AI Hub',
+  description: 'All Oscar Temple AI tools in one palce',
+  generator: 'Oscar Temple',
   icons: {
     icon: [
       {

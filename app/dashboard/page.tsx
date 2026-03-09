@@ -27,7 +27,7 @@ export default function DashboardPage() {
         <div className="container mx-auto px-4 py-12 md:py-16">
           {/* Welcome Section */}
           <div className="mb-12">
-            <h1 className="text-4xl font-bold tracking-tight mb-2">Welcome to Talenture AI Hub</h1>
+            <h1 className="text-4xl font-bold tracking-tight mb-2">Welcome to Oscar Temple AI Hub</h1>
             <p className="text-lg text-muted-foreground">
               Access powerful AI tools to enhance your productivity
             </p>
@@ -135,7 +135,7 @@ export default function DashboardPage() {
       <footer className="border-t border-border bg-muted/30">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Talenture AI Hub. All rights reserved.</p>
+            <p>&copy; 2024 Oscar Temple AI Hub. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <Link href="#" className="hover:text-foreground">Privacy</Link>
               <Link href="#" className="hover:text-foreground">Terms</Link>

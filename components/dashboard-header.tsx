@@ -37,7 +37,7 @@ export function DashboardHeader() {
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white text-sm font-bold">
             AI
           </div>
-          <span className="hidden sm:inline">Talenture AI Hub</span>
+          <span className="hidden sm:inline">Oscar Temple AI Hub</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
